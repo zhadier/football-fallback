@@ -8,7 +8,7 @@ const Homepage = () => {
   const [filter, setFilter] = useState(null);
   const [search, setSearch] = useState('');
 
-  const teamsList = useSelector((state) => state.leagueReducer);
+  const teamsList = useSelector((state) => state.teamsReducer);
 
   const handleSearch = (evt) => {
     setSearch(evt.target.value);
@@ -28,7 +28,7 @@ const Homepage = () => {
   return (
     <>
       <header>
-        <input type="text" onKeyPress={handleEnterPress} onChange={handleSearch} value={search} placeholder="Search.." />
+        <input type="text" onKeyPress={handleEnterPress} onChange={handleSearch} value={search} placeholder="🔍 Search" />
         <div className="header-icons">
           <BiMicrophone />
           <FiSettings />
