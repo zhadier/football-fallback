@@ -1,15 +1,13 @@
-// import { createStore, combineReducers, applyMiddleware } from 'redux';
-// import logger from 'redux-logger';
-// import thunk from 'redux-thunk';
-// import rocketsReducer, { getRocketsFromAPI } from './league/rockets';
-// import missionsReducer from './missions/missions';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
+import thunk from 'redux-thunk';
+import leagueReducer, { getTeamsFromAPI } from './league/league';
 
-// const reducer = combineReducers({
-//   missionsReducer,
-//   rocketsReducer,
-// });
+const reducer = combineReducers({
+  leagueReducer,
+});
 
-// const store = createStore(reducer, applyMiddleware(thunk, logger));
-// store.dispatch(getRocketsFromAPI());
+const store = createStore(reducer, applyMiddleware(thunk, logger));
+store.dispatch(getTeamsFromAPI());
 
-// export default store;
+export default store;
