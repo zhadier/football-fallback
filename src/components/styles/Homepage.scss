@@ -1,0 +1,48 @@
+$color-blue: #4771be;
+$color-darkBlue: #365a95;
+
+.homepage-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 10px;
+
+  .search {
+    padding: 5px;
+    width: 70%;
+    max-width: 400px;
+  }
+}
+
+.icons-container {
+  display: flex;
+  gap: 20px;
+  justify-self: flex-end;
+  align-items: center;
+
+  .header-icon {
+    font-size: 1.5rem;
+  }
+}
+
+.teams-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  list-style: none;
+
+  .rocket-container {
+    flex: 140px 1 1;
+    background-color: $color-darkBlue;
+    padding: 10px;
+
+    &:nth-child(odd) {
+      background-color: $color-blue;
+    }
+  }
+}
+
+#team-1 {
+  width: 100%;
+}

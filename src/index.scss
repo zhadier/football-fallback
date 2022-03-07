@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Quattrocento:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 
 * {
   margin: 0;
@@ -7,19 +7,23 @@
   scroll-behavior: smooth;
 }
 
-html {
-  font-size: 62.5%;
-  font-family: 'Quattrocento', serif;
-}
-
 body {
   min-height: 100vh;
+  font-family: 'Lato', sans-serif;
+  color: white;
+  background-color: rgb(68, 96, 163);
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 h1,
 h2,
-th {
-  font-family: 'Oswald', sans-serif;
+h3,
+h4 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, sans-serif;
 }
 
 @keyframes slideright {

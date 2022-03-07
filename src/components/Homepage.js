@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { BiMicrophone } from 'react-icons/bi';
 import { FiSettings } from 'react-icons/fi';
 import TeamItem from './TeamItem';
+import './styles/Homepage.scss';
 
 const Homepage = () => {
   const [filter, setFilter] = useState(null);
@@ -27,11 +28,11 @@ const Homepage = () => {
 
   return (
     <>
-      <header>
-        <input type="text" onKeyPress={handleEnterPress} onChange={handleSearch} value={search} placeholder="🔍 Search" />
-        <div className="header-icons">
-          <BiMicrophone />
-          <FiSettings />
+      <header className="homepage-header">
+        <input className="search" type="text" onKeyPress={handleEnterPress} onChange={handleSearch} value={search} placeholder="🔍 Search" />
+        <div className="icons-container">
+          <BiMicrophone className="header-icon" />
+          <FiSettings className="header-icon" />
         </div>
       </header>
       <ul className="teams-section">

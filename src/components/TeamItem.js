@@ -7,7 +7,7 @@ const TeamItem = (props) => {
   } = props;
 
   return (
-    <li className="rocket-container" id={id}>
+    <li className="rocket-container" id={`team-${id}`}>
       <Link to={`/teamdetails/${id}`}>
         <img src={logo} alt="team-logo" />
         <div className="team-container">
