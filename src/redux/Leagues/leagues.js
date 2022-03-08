@@ -1,21 +1,20 @@
 import { loadState, saveState } from '../../logic/localStorage';
 // constants
-const GET_TEAMS = 'football-fallback/teams/GET_TEAMS';
-const baseURL = 'https://v3.football.api-sports.io/standings?league=39&season=2021';
+const GET_LEAGUE = 'football-fallback/leagues/GET_LEAGUE';
+const baseURL = 'https://v3.football.api-sports.io/leagues?id=39';
 
 // initial state
 const initialState = [];
 
 // action creators
-export const getTeams = (payload) => ({
-  type: GET_TEAMS,
+export const getLeague = (payload) => ({
+  type: GET_LEAGUE,
   payload,
 });
 
 // thunk action functions
-
-export const getTeamsFromAPI = () => async (dispatch) => {
-  if (loadState('state').length === 0) {
+export const getLeagueFromAPI = () => async (dispatch) => {
+  if (loadState('league').length === 0) {
     await fetch(`${baseURL}`, {
       method: 'GET',
       headers: {
@@ -25,22 +24,28 @@ export const getTeamsFromAPI = () => async (dispatch) => {
     })
       .then((response) => response.json())
       .then((res) => {
-        const arrangedList = res.response[0].league.standings[0].map((team) => team);
-        saveState(arrangedList, 'state');
-        dispatch(getTeams(arrangedList));
+        const leag = res.response.map((league) => ({
+          name: league.league.name,
+          logo: league.league.logo,
+          country: league.country.name,
+          season: '2021 - 2022',
+        }));
+        console.log(leag);
+        saveState(leag, 'league');
+        dispatch(getLeague(loadState('league')));
       })
       .catch((err) => {
         console.log(err);
       });
   } else {
-    dispatch(getTeams(loadState('state')));
+    dispatch(getLeague(loadState('league')));
   }
 };
 
 // reducer
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case GET_TEAMS: {
+    case GET_LEAGUE: {
       return [...action.payload];
     }
     default:

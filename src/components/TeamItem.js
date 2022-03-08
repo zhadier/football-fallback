@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
+import { BsArrowRightCircle } from 'react-icons/bs';
 
 const TeamItem = (props) => {
   const {
@@ -7,10 +8,11 @@ const TeamItem = (props) => {
   } = props;
 
   return (
-    <li className="rocket-container" id={`team-${id}`}>
+    <li className="team-container" id={`team-${id}`}>
       <Link to={`/teamdetails/${id}`}>
+        <BsArrowRightCircle className="right-arrow-icon" />
         <img src={logo} alt="team-logo" />
-        <div className="team-container">
+        <div className="team-desc-container">
           <h2>{name}</h2>
           <p>
             Rank :

@@ -1,12 +1,13 @@
-$color-blue: #4771be;
-$color-darkBlue: #365a95;
+$light-pink: #fd5294;
+$dark-pink: #cf4278;
+$darkest-pink: #d63b77;
+$medium-pink: #ec4c8b;
 
-.homepage-header {
+.header {
+  overflow: hidden;
   display: flex;
-  width: 100%;
   justify-content: space-between;
   padding: 1rem;
-  margin-bottom: 10px;
 
   .search {
     padding: 5px;
@@ -29,20 +30,65 @@ $color-darkBlue: #365a95;
 .teams-section {
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
   list-style: none;
+  margin-bottom: 50px;
 
-  .rocket-container {
-    flex: 140px 1 1;
-    background-color: $color-darkBlue;
-    padding: 10px;
+  .teams-header {
+    flex: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-image: linear-gradient(to left, $light-pink, $darkest-pink, $darkest-pink);
+  }
 
-    &:nth-child(odd) {
-      background-color: $color-blue;
+  .team-container {
+    flex: 180px 1 0;
+    background-image: radial-gradient($light-pink, $light-pink, $darkest-pink);
+
+    &:hover {
+      transform: scale(1.07);
+    }
+
+    a {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+
+      .right-arrow-icon {
+        align-self: flex-end;
+      }
+
+      img {
+        opacity: 0.9;
+        width: 120px;
+      }
+
+      .team-desc-container {
+        margin-top: 0.8rem;
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        align-items: flex-end;
+
+        h2 {
+          font-size: 1.1rem;
+          text-align: right;
+        }
+      }
     }
   }
 }
 
-#team-1 {
-  width: 100%;
+.league-info {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  height: 300px;
+  gap: 3%;
+  justify-content: center;
+  background-color: $dark-pink;
+
+  .league-name {
+    font-size: 1.4rem;
+  }
 }
