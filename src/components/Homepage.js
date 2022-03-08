@@ -10,14 +10,17 @@ const Homepage = () => {
   const [search, setSearch] = useState('');
 
   const teamsList = useSelector((state) => state.teamsReducer);
+  const league = useSelector((state) => state.leagueReducer);
 
   const handleSearch = (evt) => {
     setSearch(evt.target.value);
     if (evt.target.value.trim().length === 0) {
       setFilter(null);
+    } else {
+      const val = evt.target.value.trim().toLowerCase();
+      const filtered = teamsList.filter((teams) => teams.team.name.toLowerCase().includes(val));
+      setFilter(filtered);
     }
-    const filtered = teamsList.filter((teams) => teams.team.name.includes(evt.target.value));
-    setFilter(filtered);
   };
 
   const handleEnterPress = (evt) => {
@@ -28,14 +31,32 @@ const Homepage = () => {
 
   return (
     <>
-      <header className="homepage-header">
-        <input className="search" type="text" onKeyPress={handleEnterPress} onChange={handleSearch} value={search} placeholder="🔍 Search" />
+      <header className="header">
+        <input
+          className="search"
+          type="text"
+          onKeyPress={handleEnterPress}
+          onChange={handleSearch}
+          value={search}
+          placeholder="🔍 Search"
+        />
         <div className="icons-container">
           <BiMicrophone className="header-icon" />
           <FiSettings className="header-icon" />
         </div>
       </header>
+      {league.map((item) => (
+        <div className="league-info" key={item.name}>
+          <img src={item.logo || ' '} alt="league" />
+          <div className="league-description">
+            <h2 className="league-name">{item.name || ' '}</h2>
+            <p>{item.country || ' '}</p>
+            <p>{item.season || ' '}</p>
+          </div>
+        </div>
+      ))}
       <ul className="teams-section">
+        <h2 className="teams-header">Team rankings</h2>
         {!filter
           ? teamsList.map((item) => (
             <TeamItem
