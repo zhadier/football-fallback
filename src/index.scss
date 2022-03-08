@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap');
 
+$medium-pink: #ec4c8b;
+
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +10,9 @@
 }
 
 body {
-  min-height: 100vh;
   font-family: 'Lato', sans-serif;
   color: white;
-  background-color: rgb(68, 96, 163);
+  background-color: $medium-pink;
 }
 
 a {
