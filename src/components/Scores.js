@@ -7,7 +7,11 @@ const Scores = (props) => {
 
   return (
     <ul className="score-container" id={title}>
-      <h3>{title}</h3>
+      <h3>
+        {title}
+        {' '}
+        Stats
+      </h3>
       <li>
         <h4 className="score-title">Played</h4>
         <p className="score-value">{played}</p>
@@ -25,19 +29,12 @@ const Scores = (props) => {
         <p className="score-value">{draw}</p>
       </li>
       <li>
-        <h4 className="score-title">Goals</h4>
-        <div className="score-goals">
-          <div className="for">
-            For:
-            {' '}
-            {goals.for}
-          </div>
-          <div className="for">
-            Against:
-            {' '}
-            {goals.against}
-          </div>
-        </div>
+        <h4 className="score-title">Goals For</h4>
+        <p className="score-value">{goals.for}</p>
+      </li>
+      <li>
+        <h4 className="score-title">Goals Against</h4>
+        <p className="score-value">{goals.against}</p>
       </li>
     </ul>
   );
