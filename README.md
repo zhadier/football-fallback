@@ -6,9 +6,8 @@
 
 >  "Football Fallback" is a web application for all Premier League fans. Stay upto date with all your favourite football teams in the league, check the current standings, and see who's going to promote and who's not!
 
-<p align="center">
 ![preview](ff.gif)
-</p>
+
 This website is for my the React-Redux Capstone at Microverse and I used the api-football API for the data.
 ## Built With
 
