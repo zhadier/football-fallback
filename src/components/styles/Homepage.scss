@@ -32,6 +32,7 @@ $medium-pink: #ec4c8b;
   flex-wrap: wrap;
   list-style: none;
   margin-bottom: 50px;
+  animation: slideright 1 0.5s ease-out;
 
   .teams-header {
     flex: 100%;
@@ -87,6 +88,7 @@ $medium-pink: #ec4c8b;
   gap: 3%;
   justify-content: center;
   background-color: $dark-pink;
+  animation: slideright 1 0.5s ease-out;
 
   .league-name {
     font-size: 1.4rem;

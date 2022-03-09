@@ -4,6 +4,8 @@ $darkest-pink: #d63b77;
 $medium-pink: #ec4c8b;
 
 .details-section {
+  animation: slideright 1 0.5s ease-out;
+
   .details-hero {
     display: flex;
     padding: 1rem;
