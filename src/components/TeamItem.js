@@ -9,7 +9,7 @@ const TeamItem = (props) => {
 
   return (
     <li className="team-container" id={`team-${id}`}>
-      <Link to={`/teamdetails/${id}`}>
+      <Link to={`/teamdetails/${id}`} data-testid={`test-${id}`}>
         <BsArrowRightCircle className="right-arrow-icon" />
         <img src={logo} alt="team-logo" />
         <div className="team-desc-container">

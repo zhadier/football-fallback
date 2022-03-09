@@ -1,7 +1,9 @@
-import { useSelector } from 'react-redux';
-import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
 import { BiMicrophone } from 'react-icons/bi';
 import { FiSettings } from 'react-icons/fi';
+import { getLeagueFromAPI } from '../redux/Leagues/leagues';
+import { getTeamsFromAPI } from '../redux/Teams/teams';
 import TeamItem from './TeamItem';
 import './styles/Homepage.scss';
 
@@ -11,6 +13,15 @@ const Homepage = () => {
 
   const teamsList = useSelector((state) => state.teamsReducer);
   const league = useSelector((state) => state.leagueReducer);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    if (teamsList.length === 0) {
+      dispatch(getTeamsFromAPI());
+    }
+    if (league.length === 0) {
+      dispatch(getLeagueFromAPI());
+    }
+  }, []);
 
   const handleSearch = (evt) => {
     setSearch(evt.target.value);
