@@ -1,0 +1,72 @@
+$light-pink: #fd5294;
+$dark-pink: #cf4278;
+$darkest-pink: #d63b77;
+$medium-pink: #ec4c8b;
+
+.details-section {
+  animation: slideright 1 0.5s ease-out;
+
+  .details-hero {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    height: 300px;
+    gap: 3%;
+    justify-content: center;
+    background-color: $dark-pink;
+
+    img {
+      width: 140px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
+
+  .details-main {
+    .details-team-desc {
+      flex: 100%;
+      padding: 0.5rem 2rem;
+      text-align: center;
+      font-size: 1rem;
+      background-image: linear-gradient(to right bottom, $darkest-pink, $light-pink);
+      border: 2px solid;
+      border-left: none;
+      border-right: none;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      padding: 2rem 1rem;
+      font-weight: 600;
+      background-color: $darkest-pink;
+      width: 100%;
+
+      &:nth-child(2n) {
+        background-color: $light-pink;
+      }
+    }
+
+    .score-container {
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        padding: 0.5rem 2rem;
+        font-size: 1rem;
+        text-align: center;
+        background-image: linear-gradient(to right bottom, $darkest-pink, $light-pink);
+        border: 2px solid;
+        border-left: none;
+        border-right: none;
+      }
+    }
+  }
+}
