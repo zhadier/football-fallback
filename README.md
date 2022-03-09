@@ -4,18 +4,23 @@
 
 # Football Fallback
 
->  "Football Fallback" is a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+>  "Football Fallback" is a web application for all Premier League fans. Stay upto date with all your favourite football teams in the league, check the current standings, and see who's going to promote and who's not!
 
 
-![preview]()
-This project was created in collaboration with @andres-condezo.
+![preview](ff.gif)
+
+This website is for my the React-Redux Capstone at Microverse and I used the api-football API for the data.
 ## Built With
 
-- HTML / CSS / JavaScript / React / Redux
+- HTML / CSS / JavaScript / React / Redux / JEST / React Testing Library
 
 ## Live Demo
 
-- [Netlify](https://space-travelers-az.netlify.app/)
+- [Netlify](https://football-fallback.netlify.app)
+
+## Video Demo
+
+- [Loom](https://www.loom.com/share/2431f7f17426463cae662c357d76945c)
 ## Getting Started
 
 ### To launch the project locally:
@@ -24,7 +29,7 @@ This project was created in collaboration with @andres-condezo.
 
 - Clone this repo locally using git in the command line and the following command
 
-  git clone https://github.com/zhadier/space-travelers
+  git clone https://github.com/zhadier/football-fallback
   
 - Alternatively, you can just download the complete zip file and extract the folder in your directory
 
@@ -102,11 +107,6 @@ To learn React, check out the
 - GitHub: [@zhadier](https://github.com/zhadier)
 - LinkedIn: [Zeeshan Haider](https://www.linkedin.com/in/zhadier39/)
 
-👤 **Andres Condezo Monge**
-
-- GitHub: [@andres-condezo](https://github.com/andres-condezo)
-- LinkedIn: [Andres Condezo Monge](https://www.linkedin.com/in/andres-condezo/)
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome and highly encouraged!
@@ -118,6 +118,13 @@ Feel free to check the [issues page](../../issues/).
 
 Give a ⭐️ if you like this project!
 I would love to hear your thoughts and ideas 🖤
+
+## Acknowledgments
+
+- The webpage was based on a design by: [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) (original design)
+
+- I would like to acknowledge a fellow developer and amazing friend [Andrés Felipe](https://github.com/JohnFTitor) for helping me mock my API for testing.
+
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
