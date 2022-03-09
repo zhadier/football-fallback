@@ -122,7 +122,7 @@ I would love to hear your thoughts and ideas 🖤
 
 - The webpage was based on a design by: [Nelson Sakwa](https://www.behance.net/sakwadesignstudio) (original design)
 
-- I would like to acknowledge a fellow developer and amazing friend [Andrés Felipe](https://github.com/JohnFTitor) for helping me mock my API for testing.
+- I would also like to acknowledge a fellow developer and amazing friend [Andrés Felipe](https://github.com/JohnFTitor) for helping me mock my API for testing.
 
 ## 📝 License
 
